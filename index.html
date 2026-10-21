@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <title>HI-TECH Car Detailing | Premium Auto Care in Pune</title>
+  <meta name="description" content="Premium car detailing in Pune. Explore ceramic coating, PPF, rubbing polish, interior cleaning, paint correction and more at HI-TECH Car Detailing.">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    :root {
+      --gold: #e8b84c;
+      --gold-light: #ffe09a;
+      --black: #090909;
+      --surface: #111111;
+      --surface-2: #171717;
+      --white: #f7f7f5;
+      --muted: #a1a1a1;
+      --border: rgba(255,255,255,.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; }
+    img { max-width: 100%; }
+
+    ::selection {
+      color: #000;
+      background: var(--gold);
+    }
+
+    .text-gold { color: var(--gold); }
+
+    .section-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .section-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: .98;
+      margin: 17px 0;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+      max-width: 560px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      padding: 20px 0;
+      background: rgba(8,8,8,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      transition: padding .3s ease, box-shadow .3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 12px 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 29px;
+      font-weight: 900;
+      letter-spacing: -.5px;
+      line-height: 1;
+    }
+
+    .brand-icon {
+      color: var(--gold);
+      font-size: 27px;
+      margin-right: 8px;
+    }
+
+    .brand-caption {
+      display: block;
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-top: 6px;
+    }
+
+    .navbar .nav-link {
+      color: #d5d5d5;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 0 9px;
+      transition: color .25s;
+    }
+
+    .navbar .nav-link:hover { color: var(--gold); }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #111;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      padding: 14px 23px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      transition: .3s ease;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(232,184,76,.18);
+    }
+
+    .btn-outline-light {
+      border-radius: 2px;
+      padding: 14px 23px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255,255,255,.25);
+      padding: 8px 10px;
+    }
+
+    .navbar-toggler:focus { box-shadow: none; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 790px;
+      min-height: min(900px, 100svh);
+      display: flex;
+      align-items: center;
+      isolation: isolate;
+      overflow: hidden;
+      background: #101010;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background:
+        linear-gradient(90deg, rgba(5,5,5,.96) 0%, rgba(5,5,5,.78) 42%, rgba(5,5,5,.15) 100%),
+        linear-gradient(0deg, #090909 0%, transparent 28%, rgba(0,0,0,.18) 100%),
+        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2200&q=90') center 55%/cover;
+      animation: heroZoom 15s ease-out forwards;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      width: 450px;
+      height: 450px;
+      top: 5%;
+      right: 5%;
+      border-radius: 50%;
+      background: rgba(232,184,76,.07);
+      filter: blur(100px);
+    }
+
+    @keyframes heroZoom {
+      from { transform: scale(1.08); }
+      to { transform: scale(1); }
+    }
+
+    .hero-content {
+      padding-top: 95px;
+      padding-bottom: 100px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      border: 1px solid rgba(232,184,76,.38);
+      background: rgba(232,184,76,.07);
+      padding: 10px 15px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 27px;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(232,184,76,.6);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 8px rgba(232,184,76,0); }
+      100% { box-shadow: 0 0 0 0 rgba(232,184,76,0); }
+    }
+
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(65px, 9vw, 120px);
+      line-height: .84;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      margin: 0 0 30px;
+    }
+
+    .hero h1 .outline {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--gold);
+    }
+
+    .hero-description {
+      max-width: 470px;
+      color: #c5c5c5;
+      font-size: 14px;
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-top: 55px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.15);
+      max-width: 470px;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 29px;
+      line-height: 1;
+    }
+
+    .hero-stat span {
+      color: #a5a5a5;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .hero-vertical {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,.7);
+    }
+
+    /* TICKER */
+    .ticker {
+      overflow: hidden;
+      background: var(--gold);
+      color: #111;
+      padding: 15px 0;
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMove 28s linear infinite;
+    }
+
+    .ticker-track span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding: 0 26px;
+    }
+
+    .ticker-track i {
+      font-size: 12px;
+      margin-right: 26px;
+    }
+
+    @keyframes tickerMove {
+      to { transform: translateX(-50%); }
+    }
+
+    /* ABOUT */
+    .about-section { padding: 120px 0; }
+
+    .about-image-wrap {
+      position: relative;
+      padding: 0 35px 35px 0;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      filter: saturate(.72);
+    }
+
+    .about-image-wrap::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 72%;
+      height: 72%;
+      border-right: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      pointer-events: none;
+    }
+
+    .about-badge {
+      position: absolute;
+      right: 0;
+      top: 35px;
+      background: var(--gold);
+      color: #111;
+      padding: 22px 25px;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .about-badge strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    .about-badge span {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ddd;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    .check-item i {
+      color: var(--gold);
+      font-size: 15px;
+    }
+
+    /* SERVICES */
+    .services-section {
+      padding: 115px 0;
+      background: #0d0d0d;
+      position: relative;
+    }
+
+    .service-card {
+      height: 100%;
+      padding: 31px 25px;
+      background: linear-gradient(145deg,#171717,#101010);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: transform .35s, border-color .35s, background .35s;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 0;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(232,184,76,.4);
+      background: linear-gradient(145deg,#202020,#111);
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      height: 55px;
+      width: 55px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(232,184,76,.35);
+      background: rgba(232,184,76,.06);
+      color: var(--gold);
+      font-size: 23px;
+      margin-bottom: 26px;
+      transition: .3s;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--gold);
+      color: #111;
+      transform: rotate(-5deg);
+    }
+
+    .service-number {
+      position: absolute;
+      top: 20px;
+      right: 22px;
+      font-family: 'Barlow Condensed', sans-serif;
+      color: #454545;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .service-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: gap .25s;
+    }
+
+    .service-link:hover { color: var(--gold-light); gap: 14px; }
+
+    /* FEATURE STRIP */
+    .feature-strip {
+      padding: 50px 0;
+      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 15px;
+    }
+
+    .feature-item > i {
+      color: var(--gold);
+      font-size: 26px;
+    }
+
+    .feature-item strong {
+      display: block;
+      font-size: 12px;
+    }
+
+    .feature-item span {
+      color: var(--muted);
+      font-size: 10px;
+      display: block;
+      margin-top: 5px;
+    }
+
+    /* GALLERY */
+    .gallery-section { padding: 115px 0; }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      height: 310px;
+      background: #151515;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.72);
+      transition: transform .7s, filter .7s;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.08);
+      filter: saturate(1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: end;
+      padding: 25px;
+      background: linear-gradient(0deg,rgba(0,0,0,.88),transparent 65%);
+    }
+
+    .gallery-overlay h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .gallery-overlay p {
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 7px 0 0;
+    }
+
+    /* PROCESS */
+    .process-section {
+      padding: 110px 0;
+      background: var(--surface);
+    }
+
+    .process-card {
+      padding: 30px 25px;
+      border-left: 1px solid rgba(232,184,76,.4);
+      position: relative;
+      height: 100%;
+    }
+
+    .process-number {
+      color: var(--gold);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 43px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 23px;
+    }
+
+    .process-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+      margin: 0;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: 95px 0;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg,rgba(8,8,8,.97),rgba(8,8,8,.80)),
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85') center/cover;
+    }
+
+    .cta-section::after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      top: -160px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(232,184,76,.08);
+      filter: blur(70px);
+      pointer-events: none;
+    }
+
+    .cta-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(42px, 6vw, 75px);
+      line-height: .95;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials-section { padding: 110px 0; }
+
+    .review-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 32px;
+      height: 100%;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .review-card blockquote {
+      color: #d5d5d5;
+      font-size: 13px;
+      line-height: 1.9;
+      margin-bottom: 25px;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-avatar {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: #292929;
+      border: 1px solid rgba(232,184,76,.4);
+      color: var(--gold);
+      border-radius: 50%;
+    }
+
+    .reviewer strong { font-size: 12px; display: block; }
+    .reviewer span { font-size: 10px; color: var(--muted); display: block; margin-top: 4px; }
+
+    /* CONTACT */
+    .contact-section {
+      padding: 110px 0;
+      background: #101010;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 17px;
+      margin-bottom: 27px;
+    }
+
+    .contact-info > i {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      background: rgba(232,184,76,.08);
+      border: 1px solid rgba(232,184,76,.3);
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .contact-info strong { font-size: 12px; display: block; margin-bottom: 7px; }
+    .contact-info span, .contact-info a { color: var(--muted); font-size: 12px; line-height: 1.8; }
+
+    .booking-form {
+      background: #171717;
+      padding: 35px;
+      border: 1px solid var(--border);
+    }
+
+    .booking-form label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ccc;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .booking-form .form-control,
+    .booking-form .form-select {
+      border-radius: 0;
+      padding: 13px;
+      color: white;
+      background: #0e0e0e;
+      border: 1px solid #333;
+      font-size: 12px;
+    }
+
+    .booking-form .form-control:focus,
+    .booking-form .form-select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(232,184,76,.1);
+    }
+
+    .booking-form .form-control::placeholder { color: #777; }
+    .booking-form select option { background: #111; color: #fff; }
+
+    /* FOOTER */
+    footer {
+      padding: 35px 0;
+      background: #080808;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 25px;
+      font-weight: 900;
+      color: white;
+    }
+
+    .footer-copy { color: #858585; font-size: 10px; line-height: 1.9; }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      display: inline-grid;
+      place-items: center;
+      color: white;
+      background: #171717;
+      border: 1px solid #333;
+      margin-left: 6px;
+      transition: .3s;
+    }
+
+    .social-link:hover {
+      color: #111;
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    /* WHATSAPP + BACK TO TOP */
+    .whatsapp-float {
+      position: fixed;
+      right: 23px;
+      bottom: 23px;
+      z-index: 999;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 27px;
+      box-shadow: 0 6px 25px rgba(37,211,102,.3);
+      transition: .3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-5px) scale(1.04);
+      color: #fff;
+    }
+
+    .back-top {
+      position: fixed;
+      left: 22px;
+      bottom: 23px;
+      z-index: 998;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      background: #1b1b1b;
+      border: 1px solid #333;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: .3s;
+    }
+
+    .back-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: .12s; }
+    .delay-2 { transition-delay: .24s; }
+    .delay-3 { transition-delay: .36s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        padding: 20px 0 10px;
+      }
+
+      .navbar .nav-link { margin: 5px 0; }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-bg {
+        background-position: 60% center;
+        background-image:
+          linear-gradient(90deg,rgba(5,5,5,.92),rgba(5,5,5,.65)),
+          linear-gradient(0deg,#090909,transparent 35%),
+          url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=85');
+      }
+
+      .hero-content { padding-top: 170px; padding-bottom: 90px; }
+      .hero-vertical { display: none; }
+      .about-section, .services-section, .gallery-section,
+      .process-section, .testimonials-section, .contact-section {
+        padding: 80px 0;
+      }
+
+      .about-image { height: 420px; }
+    }
+
+    @media (max-width: 575px) {
+      .hero-content { padding-top: 145px; padding-bottom: 70px; }
+      .hero h1 { font-size: clamp(59px, 15vw, 82px); letter-spacing: -1px; }
+      .hero-description { font-size: 13px; }
+      .hero-bottom { gap: 20px; }
+      .hero-stat strong { font-size: 24px; }
+      .hero-stat span { font-size: 8px; letter-spacing: .6px; }
+      .about-section, .services-section, .gallery-section,
+      .process-section, .testimonials-section, .contact-section {
+        padding: 65px 0;
+      }
+      .about-image-wrap { padding-right: 20px; padding-bottom: 20px; }
+      .about-image { height: 330px; }
+      .about-badge { top: 20px; padding: 15px; }
+      .about-badge strong { font-size: 28px; }
+      .service-card { padding: 26px 22px; }
+      .gallery-card { height: 260px; }
+      .booking-form { padding: 23px; }
+      .feature-item { justify-content: flex-start; padding-left: 25px; }
+      .cta-section { padding: 70px 0; }
+      .hero-actions .btn { flex: 1 1 auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home" aria-label="HI-TECH Car Detailing home">
+        <i class="fa-solid fa-car-side brand-icon"></i>HI-TECH
+        <span class="brand-caption">CAR DETAILING STUDIO</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu" aria-controls="navbarMenu"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">GALLERY</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <a class="btn btn-gold" href="#contact">
+              Book Your Service <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-bg"></div>
+
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-lg-8 col-xl-7">
+          <div class="hero-kicker">
+            <span class="pulse-dot"></span>
+            Premium Car Care · Pune, India
+          </div>
+
+          <h1>
+            BEYOND<br>
+            <span class="outline">SHINE.</span><br>
+            BE ICONIC.
+          </h1>
+
+          <p class="hero-description">
+            Your car deserves more than a wash. Experience precision detailing,
+            deep-gloss finishes and advanced paint protection that make every
+            drive feel extraordinary.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#services" class="btn btn-gold">
+              Explore Services <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline-light">
+              Get a Free Quote
+            </a>
+          </div>
+
+          <div class="hero-bottom">
+            <div class="hero-stat">
+              <strong>01 <span class="text-gold d-inline">/</span> PREMIUM</strong>
+              <span>Care for every car</span>
+            </div>
+            <div class="hero-stat">
+              <strong>360°</strong>
+              <span>Complete detailing</span>
+            </div>
+            <div class="hero-stat">
+              <strong>100%</strong>
+              <span>Attention to detail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-vertical">PRECISION · PROTECTION · PERFECTION</div>
+  </header>
+
+  <!-- MOVING TICKER -->
+  <div class="ticker" aria-label="Our car detailing services">
+    <div class="ticker-track">
+      <span><i class="fa-solid fa-star"></i> Ceramic Coating</span>
+      <span><i class="fa-solid fa-star"></i> Paint Correction</span>
+      <span><i class="fa-solid fa-star"></i> Premium Detailing</span>
+      <span><i class="fa-solid fa-star"></i> PPF Protection</span>
+      <span><i class="fa-solid fa-star"></i> Interior Spa</span>
+      <span><i class="fa-solid fa-star"></i> Ceramic Coating</span>
+      <span><i class="fa-solid fa-star"></i> Paint Correction</span>
+      <span><i class="fa-solid fa-star"></i> Premium Detailing</span>
+      <span><i class="fa-solid fa-star"></i> PPF Protection</span>
+      <span><i class="fa-solid fa-star"></i> Interior Spa</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal">
+          <div class="about-image-wrap">
+            <img class="about-image"
+              src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1000&q=85"
+              alt="Professional car detailing and paint care"
+              loading="lazy">
+            <div class="about-badge">
+              <strong>HI-TECH</strong>
+              <span>Premium Auto Care</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 reveal delay-1">
+          <span class="section-label">Welcome to HI-TECH</span>
+          <h2 class="section-heading">
+            WE DON'T JUST<br> CLEAN CARS.<br>
+            <span class="text-gold">WE RESTORE PRIDE.</span>
+          </h2>
+
+          <p class="section-description mb-4">
+            At HI-TECH Car Detailing, we believe every vehicle deserves
+            exceptional care. Our detailing services are designed to refresh
+            your car's appearance, enhance its finish and help protect it
+            against everyday wear.
+          </p>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="check-item"><i class="fa-solid fa-circle-check"></i> Precision-focused care</div>
+              <div class="check-item"><i class="fa-solid fa-circle-check"></i> Premium finish options</div>
+            </div>
+            <div class="col-sm-6">
+              <div class="check-item"><i class="fa-solid fa-circle-check"></i> Interior & exterior care</div>
+              <div class="check-item"><i class="fa-solid fa-circle-check"></i> Personalized service</div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-gold mt-3">
+            Discover Our Studio <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-8 reveal">
+          <span class="section-label">Our Expertise</span>
+          <h2 class="section-heading">CARE THAT GOES<br><span class="text-gold">BEYOND THE SURFACE.</span></h2>
+        </div>
+        <div class="col-lg-4 reveal delay-1">
+          <p class="section-description mb-0">
+            From a flawless gloss to advanced surface protection, discover
+            detailing solutions tailored to your vehicle.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3>Rubbing & Polish</h3>
+            <p>Refresh your vehicle's finish with paint polishing designed to improve gloss and reduce the appearance of minor surface imperfections.</p>
+            <a href="#contact" class="service-link" data-service="Rubbing & Polish">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-1">
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+            <h3>Wax Polish</h3>
+            <p>Add a smooth, glossy finish with a protective wax layer that helps keep your vehicle looking fresh and well cared for.</p>
+            <a href="#contact" class="service-link" data-service="Wax Polish">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-2">
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Ceramic Coating</h3>
+            <p>Give your paint a sleek finish with a ceramic protection option designed to enhance gloss and make routine cleaning easier.</p>
+            <a href="#contact" class="service-link" data-service="Ceramic Coating">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+            <h3>Interior Deep Cleaning</h3>
+            <p>Refresh seats, carpets, mats and interior touchpoints for a cleaner, more comfortable cabin experience.</p>
+            <a href="#contact" class="service-link" data-service="Interior Deep Cleaning">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-1">
+          <article class="service-card">
+            <span class="service-number">05</span>
+            <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Engine Coating</h3>
+            <p>Explore suitable engine-bay surface care and protective treatments, selected according to vehicle materials and requirements.</p>
+            <a href="#contact" class="service-link" data-service="Engine Coating">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-2">
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <div class="service-icon"><i class="fa-solid fa-car-burst"></i></div>
+            <h3>Underbody Coating</h3>
+            <p>Protect suitable underbody surfaces with an appropriate coating solution based on vehicle condition and usage.</p>
+            <a href="#contact" class="service-link" data-service="Underbody Coating">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <article class="service-card">
+            <span class="service-number">07</span>
+            <div class="service-icon"><i class="fa-solid fa-shield"></i></div>
+            <h3>Paint Protection Film</h3>
+            <p>Explore PPF solutions that help shield selected painted surfaces from everyday road debris and minor abrasions.</p>
+            <a href="#contact" class="service-link" data-service="Paint Protection Film (PPF)">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-1">
+          <article class="service-card">
+            <span class="service-number">08</span>
+            <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Headlight Restoration</h3>
+            <p>Improve the appearance of cloudy or oxidized headlights with suitable restoration treatments.</p>
+            <a href="#contact" class="service-link" data-service="Headlight Restoration">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-2">
+          <article class="service-card">
+            <span class="service-number">09</span>
+            <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
+            <h3>Denting & Painting</h3>
+            <p>Refresh damaged body panels with suitable dent repair and paintwork solutions, subject to vehicle inspection.</p>
+            <a href="#contact" class="service-link" data-service="Denting & Painting">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE STRIP -->
+  <section class="feature-strip">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-lg-3">
+          <div class="feature-item">
+            <i class="fa-solid fa-gem"></i>
+            <div><strong>Premium Finish</strong><span>Care in every detail</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="feature-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div><strong>Surface Protection</strong><span>Solutions for your car</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="feature-item">
+            <i class="fa-solid fa-spray-can-sparkles"></i>
+            <div><strong>Detail-Oriented Care</strong><span>Inside and out</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="feature-item">
+            <i class="fa-solid fa-car"></i>
+            <div><strong>All-Round Care</strong><span>One detailing destination</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-label">The Detailing Experience</span>
+        <h2 class="section-heading">DETAILS MAKE<br><span class="text-gold">THE DIFFERENCE.</span></h2>
+        <p class="section-description mx-auto">
+          A glimpse into the world of automotive care, deep gloss and premium finishes.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800&q=85" alt="Professional automotive detailing" loading="lazy">
+            <div class="gallery-overlay">
+              <div><h3>Precision Detailing</h3><p>Every inch matters</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-1">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=85" alt="Premium car exterior finish" loading="lazy">
+            <div class="gallery-overlay">
+              <div><h3>Gloss & Finish</h3><p>Make every angle count</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-2">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=85" alt="Luxury sports car exterior" loading="lazy">
+            <div class="gallery-overlay">
+              <div><h3>Automotive Excellence</h3><p>Driven by perfection</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center mt-4 mb-0" style="color:#777;font-size:10px;">
+        Demo gallery — replace with actual HI-TECH customer vehicle photos before launch.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 reveal">
+          <span class="section-label">Simple. Professional. Personal.</span>
+          <h2 class="section-heading">YOUR CAR.<br><span class="text-gold">OUR ATTENTION.</span></h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="process-card">
+            <div class="process-number">01</div>
+            <h3>Tell Us What You Need</h3>
+            <p>Choose your service and share a few details about your vehicle.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal delay-1">
+          <div class="process-card">
+            <div class="process-number">02</div>
+            <h3>Get a Personalized Quote</h3>
+            <p>Discuss the vehicle's condition, your expectations and suitable options.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal delay-2">
+          <div class="process-card">
+            <div class="process-number">03</div>
+            <h3>Book Your Visit</h3>
+            <p>Confirm your preferred date and time directly with our team.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal delay-3">
+          <div class="process-card">
+            <div class="process-number">04</div>
+            <h3>Enjoy the Fresh Finish</h3>
+            <p>Collect your vehicle after the agreed detailing work is complete.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="cta-section">
+    <div class="container position-relative" style="z-index:1;">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8 reveal">
+          <span class="section-label">Your Car Deserves Better</span>
+          <h2 class="cta-title mt-3">READY FOR A<br><span class="text-gold">SHOWROOM SHINE?</span></h2>
+          <p class="section-description mt-3 mb-0">
+            Let's find the right detailing service for your vehicle.
+            Get in touch with HI-TECH Car Detailing in Pune.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end reveal delay-1">
+          <a href="#contact" class="btn btn-gold">
+            Get Your Free Quote <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS: DEMO PLACEHOLDERS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="section-label">The Customer Experience</span>
+        <h2 class="section-heading">CARE YOU CAN <span class="text-gold">FEEL.</span></h2>
+        <p class="section-description mx-auto">
+          Every great detailing experience starts with understanding what your car needs.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="review-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <blockquote>“Add a genuine customer review here describing their experience with the polishing or exterior detailing service.”</blockquote>
+            <div class="reviewer">
+              <div class="review-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><strong>Customer Name</strong><span>Rubbing & Polish</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-1">
+          <div class="review-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <blockquote>“Replace this sample with an authentic testimonial from a customer who booked ceramic coating or paint protection.”</blockquote>
+            <div class="reviewer">
+              <div class="review-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><strong>Customer Name</strong><span>Ceramic Coating</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal delay-2">
+          <div class="review-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <blockquote>“Add a real customer story about the interior cleaning, service quality or overall detailing experience.”</blockquote>
+            <div class="reviewer">
+              <div class="review-avatar"><i class="fa-solid fa-user"></i></div>
+              <div><strong>Customer Name</strong><span>Interior Detailing</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center mt-4 mb-0" style="color:#777;font-size:10px;">
+        Review cards are placeholders for the demo, not verified customer testimonials.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5 reveal">
+          <span class="section-label">Let's Talk Cars</span>
+          <h2 class="section-heading">LET'S MAKE<br>YOUR CAR <span class="text-gold">SHINE.</span></h2>
+          <p class="section-description mb-5">
+            Tell us about your car and the service you're looking for.
+            Our demo booking form will prepare a WhatsApp enquiry for you.
+          </p>
+
+          <div class="contact-info">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><strong>OUR LOCATION</strong><span>Pune, Maharashtra, India<br>Exact studio address to be added</span></div>
+          </div>
+
+          <div class="contact-info">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><strong>WHATSAPP / PHONE</strong><span>Update with the business contact number</span></div>
+          </div>
+
+          <div class="contact-info">
+            <i class="fa-regular fa-clock"></i>
+            <div><strong>WORKING HOURS</strong><span>Add confirmed opening and closing hours</span></div>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=car+detailing+Pune"
+             target="_blank" rel="noopener noreferrer" class="btn btn-outline-light mt-2">
+            <i class="fa-solid fa-map-location-dot me-2"></i> Explore Pune on Maps
+          </a>
+        </div>
+
+        <div class="col-lg-7 reveal delay-1">
+          <form class="booking-form" id="bookingForm">
+            <h3 class="mb-2" style="font-family:'Barlow Condensed';font-size:30px;font-weight:800;text-transform:uppercase;">
+              REQUEST A <span class="text-gold">QUOTE</span>
+            </h3>
+            <p class="section-description mb-4" style="font-size:12px;">
+              Fill in the details below to prepare your enquiry.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="customerName">Your Name *</label>
+                <input class="form-control" id="customerName" name="name" placeholder="Enter your name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="customerPhone">Your Phone *</label>
+                <input class="form-control" id="customerPhone" name="phone" type="tel"
+                  inputmode="numeric" pattern="[0-9+\s()-]{10,18}"
+                  placeholder="Enter your phone number" required>
+              </div>
+              <div class="col-md-6">
+                <label for="carModel">Car Model *</label>
+                <input class="form-control" id="carModel" name="car" placeholder="e.g. Hyundai Creta" required>
+              </div>
+              <div class="col-md-6">
+                <label for="serviceType">Select Service *</label>
+                <select class="form-select" id="serviceType" name="service" required>
+                  <option value="">Choose a service</option>
+                  <option>Rubbing & Polish</option>
+                  <option>Wax Polish</option>
+                  <option>Ceramic Coating</option>
+                  <option>Interior Deep Cleaning</option>
+                  <option>Engine Coating</option>
+                  <option>Underbody Coating</option>
+                  <option>Paint Protection Film (PPF)</option>
+                  <option>Headlight Restoration</option>
+                  <option>Denting & Painting</option>
+                  <option>Multiple Services / Not Sure</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="customerMessage">Additional Details</label>
+                <textarea class="form-control" id="customerMessage" name="message" rows="4"
+                  placeholder="Tell us about your car or preferred appointment date..."></textarea>
+              </div>
+              <div class="col-12 mt-4">
+                <button class="btn btn-gold w-100" type="submit">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Continue Enquiry on WhatsApp
+                </button>
+                <p class="mb-0 mt-3 text-center" style="color:#777;font-size:10px;">
+                  Your details will be included in a WhatsApp message for you to send.
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <a class="footer-brand" href="#home">
+            <i class="fa-solid fa-car-side text-gold me-2"></i>HI-TECH
+          </a>
+          <p class="footer-copy mt-2 mb-0">
+            PREMIUM CAR DETAILING · PUNE, INDIA<br>
+            Precision. Protection. Perfection.
+          </p>
+        </div>
+
+        <div class="col-md-6 text-md-end">
+          <!-- Add the business's real social profile URLs before launch -->
+          <a href="#contact" class="social-link" aria-label="Instagram placeholder"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#contact" class="social-link" aria-label="Facebook placeholder"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#contact" class="social-link" aria-label="Contact us"><i class="fa-solid fa-phone"></i></a>
+          <p class="footer-copy mt-3 mb-0">
+            © <span id="currentYear"></span> HI-TECH Car Detailing. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTIONS -->
+  <a class="whatsapp-float" href="#" id="floatingWhatsApp"
+     aria-label="Contact HI-TECH Car Detailing on WhatsApp" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button class="back-top" id="backTop" aria-label="Back to top" type="button">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ==================================================
+    // HI-TECH CAR DETAILING — WEBSITE CONFIGURATION
+    // Replace the demo phone number with the real number.
+    // Use the country code, without the + sign.
+    // Example: 919876543210
+    // ==================================================
+
+    const BUSINESS_WHATSAPP = "919876543210"; // DEMO ONLY: REPLACE BEFORE LAUNCH
+
+    // Navigation, scroll effects and back-to-top button
+    const navbar = document.getElementById("mainNav");
+    const backTop = document.getElementById("backTop");
+
+    function handleScroll() {
+      navbar.classList.toggle("scrolled", window.scrollY > 40);
+      backTop.classList.toggle("visible", window.scrollY > 500);
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    backTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Close the mobile navigation after selecting a link
+    document.querySelectorAll("#navbarMenu .nav-link, #navbarMenu .btn").forEach(link => {
+      link.addEventListener("click", () => {
+        const menu = document.getElementById("navbarMenu");
+        if (menu.classList.contains("show")) {
+          bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        }
+      });
+    });
+
+    // Reveal elements when they enter the viewport
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealElements.forEach(element => revealObserver.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("visible"));
+    }
+
+    // Prefill the booking form when a service is selected from a card
+    document.querySelectorAll("[data-service]").forEach(link => {
+      link.addEventListener("click", () => {
+        const serviceSelect = document.getElementById("serviceType");
+        const requestedService = link.dataset.service;
+        const matchingOption = Array.from(serviceSelect.options).find(
+          option => option.text === requestedService
+        );
+
+        if (matchingOption) serviceSelect.value = matchingOption.value;
+      });
+    });
+
+    // Floating WhatsApp contact button
+    document.getElementById("floatingWhatsApp").addEventListener("click", event => {
+      event.preventDefault();
+      const message = "Hi HI-TECH Car Detailing! I would like to enquire about your car detailing services in Pune.";
+      openWhatsApp(message);
+    });
+
+    // Booking form: build a message and open WhatsApp
+    document.getElementById("bookingForm").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const name = document.getElementById("customerName").value.trim();
+      const phone = document.getElementById("customerPhone").value.trim();
+      const car = document.getElementById("carModel").value.trim();
+      const service = document.getElementById("serviceType").value;
+      const details = document.getElementById("customerMessage").value.trim();
+
+      if (!name || !phone || !car || !service) {
+        alert("Please complete all required fields.");
+        return;
+      }
+
+      const message = [
+        "Hello HI-TECH Car Detailing!",
+        "",
+        "I'd like to enquire about a car detailing service.",
+        "",
+        "Name: " + name,
+        "Phone: " + phone,
+        "Car Model: " + car,
+        "Service: " + service,
+        "Additional Details: " + (details || "Not provided"),
+        "",
+        "Please share the available options and quotation."
+      ].join("\n");
+
+      openWhatsApp(message);
+    });
+
+    function openWhatsApp(message) {
+      // Prevent the demo placeholder from being mistaken for the real business number.
+      if (BUSINESS_WHATSAPP === "919876543210") {
+        alert("Demo setup: Please replace BUSINESS_WHATSAPP in the JavaScript with the real HI-TECH WhatsApp number before testing enquiries.");
+        return;
+      }
+
+      if (!/^\d{10,15}$/.test(BUSINESS_WHATSAPP)) {
+        alert("Please configure a valid WhatsApp number with country code.");
+        return;
+      }
+
+      const url = "https://wa.me/" + BUSINESS_WHATSAPP +
+        "?text=" + encodeURIComponent(message);
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    // Automatic copyright year
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
